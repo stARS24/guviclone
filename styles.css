@@ -1,0 +1,703 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+/* NAVBAR */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 10px 30px;
+}
+
+.logo{
+    width: 30rem;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    width: 45rem;
+    padding-top: 10px;
+}
+
+.auth{
+    display: flex;
+    width: 13rem;
+    padding-left: 10px;
+}
+
+.signup-btn{
+    background-color: rgb(34 197 94);
+    border-radius: 0.25rem;
+    padding-top: 10px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+}
+
+.nav-a-tag {
+    color: rgb(107 114 128);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* BANNERS */
+#i1, #i2, #i3{ display: none;}
+
+.container{
+		margin: 0 auto;
+		position: relative;
+		width: 100%;
+	    user-select: none;
+        height: 300px;
+	}
+
+	.container .slide_img{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	.container .slide_img img{
+		width: 100%;
+        height: 340px;
+	}
+
+	 .prev, .next{
+		width: 5%;
+		height: inherit;
+		position: absolute;
+		top:0; 
+		color: rgb(107 114 128);
+		z-index: 99;
+		transition: .45s;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.next{right:25px;}
+	.prev{left:0;}
+
+	label span{
+		position: absolute;
+		font-size: 100pt;
+		top: 50%;
+	 	transform: translateY(-50%);
+	}
+
+	.prev:hover, .next:hover{
+		transition: .3s;
+		color: #ffffff; 
+	}
+
+.slide_img{z-index: -1;}
+
+	#i1:checked ~ #one  ,
+	#i2:checked ~ #two  ,
+	#i3:checked ~ #three
+	{z-index: 9; animation: scroll 1s ease-in-out;}
+
+	#i1:checked  ~  #nav_slide #dot1,
+	#i2:checked  ~  #nav_slide #dot2,
+	#i3:checked  ~  #nav_slide #dot3
+	{ background-color: rgba(255,255,255,.9);}
+
+@keyframes scroll{
+	0%{	
+        opacity:0;
+        transform: translateX(0%);
+    }
+    99%{	
+        opacity:0.4;
+        transform: translateX(-100%);
+    }
+	100%{
+        opacity:1;
+        transform: translateX(-100%);
+    }
+}		
+
+/* Accredition */
+.accredition{
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f9;
+    padding-top: 60px;
+    margin-right: 0;
+    padding-bottom: 30px;
+}
+
+.accredition-logos {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.accredition-logos img{
+    width: 150px;
+    height: 100px;
+    border-radius: 0.5rem;
+}
+
+/* LEARN */
+.learn{
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    padding: 40px;
+    margin-top: 40px;
+    background-color: #ffffff;
+}
+
+.learn-text{
+    width: 40%;
+}
+
+.learn-text h1{
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.learn-text-p{
+    color: #707070;
+    font-weight: 400;
+    font-size: 1.35rem;
+}
+
+.learn-text-p2{
+    color: #707070;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: -5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f6f7f8;
+    
+    display: inline-block;
+}
+
+.unhidden{
+    display: none;
+}
+
+/* WHAT GUVI OFFERS */
+.offer{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #f6f6f9;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.offer-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;;
+}
+
+.offer-container{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+    /* shadow-bottom */
+    box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
+    width: 300px;
+}
+
+.offer-container a{
+    text-decoration: none;
+    color: #099f4e;
+    font-weight: 500;
+}
+
+.offer-container p{
+    font-weight: 400;
+}
+
+/* ZEN CLASS */
+.zen{
+    background-color: #f6f6f9;
+    padding-left: 150px;
+    padding-bottom: 40px;
+}
+
+.zen-button{
+    background-color: #0dba4b;
+    color: white;
+    padding: 10px;
+    font: 1em sans-serif;
+    font-weight: 400;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 200px;
+}
+
+/* CORPORATES */
+.corp-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f6f6f9;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1rem;
+    text-align: center;
+    margin: 10px 0 20px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.features {
+    align-items: flex-start;
+}
+.feature-item {
+    text-align: left;
+    flex: 1 1 200px;
+    max-width: 200px;
+    height: 75px;
+    border-left: black dashed;
+    border-top-width: 2px;
+    border-top-left-radius: 5px;
+    border-top: black dashed 2px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.feature-item img {
+    display: block;
+    margin: 0 auto;
+    align-items: left;
+    width: 32px;
+    height: 32px;
+}
+
+.feature-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.corp-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0dba4b;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.corp-btn .hidden {
+    display: none;
+}
+
+/* STATS */
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.stats-list {
+    display: flex;
+    flex-wrap: nowrap; 
+    gap: 20px;
+    justify-content: space-between;
+    margin: 0 -20px;
+}
+
+.stat-item {
+    flex: 1 1 23%; 
+    max-width: 23%;
+    background: #e5e7eb;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+    font-size: 2rem;
+    color: #0dba4b;
+    margin: 0;
+}
+
+.stat-content p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.progress-stats {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.progress-item {
+    flex: 1 1 30%; 
+    max-width: 30%;
+    background: #e5e7eb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.progress-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.progress-circle svg {
+    width: 100%;
+    height: 100%;
+}
+
+.progress-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.progress-content p {
+    font-size: 1rem;
+    margin: 0;
+    flex: 1;
+}
+
+
+
+
+
+
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.live-class {
+    background-color: red;
+    color: white;
+    font-size: 0.8em;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.new-tag {
+    background-color: red;
+    color: white;
+    font-size: 0.8em;
+    padding: 3px 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.footer-separator {
+    border: none;
+    border-top: 1px solid #555;
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.footer-info {
+    max-width: 60%;
+}
+
+.footer-info p {
+    color: #ccc;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-links img {
+    height: 20px;
+    margin-left: 10px;
+}
+
+.social-media-section {
+    grid-column: span 1; /* Takes up 1 column */
+}
+
+.footer-right {
+    grid-column: span 1; /* Takes up 1 column */
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Adds spacing between button and image */
+}
+
+.social-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create a grid with 3 equal columns for icons */
+    gap: 10px; /* Adds spacing between icons */
+}
+
+.social-icons a {
+    display: flex; /* Use flexbox to align icons */
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+}
+
+.social-icons img {
+    width: 40px;
+    height: auto; /* Maintain aspect ratio */
+}
+
+button {
+    background-color: black; /* Black background */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px; /* Adjust padding for better appearance */
+    font-size: 16px; /* Font size */
+    text-align: center; /* Center text */
+    width: 100%; /* Make button take full width of its grid cell */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+button:hover {
+    background-color: white; /* White background on hover */
+    color: black; /* Black text color on hover */
+    border: 1px solid black; /* Optional: add border on hover to enhance visibility */
+}
+
+.footer-right a img {
+    width: 100%; /* Make the image take full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 40px; /* Set a maximum height to match the button */
+    object-fit: contain; /* Ensure image fits well in container */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.bottom-text {
+    text-align: right;
+    font-size: 14px;
+    color: #888;
+    padding-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px; 
+}
+
+.bottom-text a {
+    color: #888;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.bottom-text a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1080px){
+    .hidden{
+        display: none;
+    }
+
+    .unhidden{
+        display: block;
+        text-align: center;
+    }
+
+    .learn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 40px;
+        background-color: #ffffff;
+    }
+
+    .learn-text{
+        width: 70%;
+    }
+
+    .offer{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .zen{
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 880px){
+    .hidden2{
+        display: none;
+    }
+
+    .footer-section {
+        width: 45%;
+    }
+
+    .footer-info {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .offer-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        flex: 1 1 150px;
+        max-width: 150px;
+    }
+    
+    .corp-btn {
+        font-size: 0.875rem;
+        padding: 8px 16px;
+    }
+
+    .stats-list {
+        flex-wrap: wrap; 
+        gap: 20px; 
+    }
+
+    .stat-item {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+
+    .progress-stats {
+        flex-wrap: wrap;
+    }
+
+    .progress-item {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px){
+    .hidden3{
+        display: none;
+    }
+
+    .footer-section {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        margin-bottom: 20px;
+    }
+}
